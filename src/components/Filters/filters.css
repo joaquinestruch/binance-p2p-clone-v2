@@ -1,0 +1,120 @@
+.nav-filters{
+    
+    padding: 10px;
+    width: 60%;
+    margin: auto;
+    font-family: BinanceFont;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    position: sticky;
+    top: 80px;  
+    background-color: #ffff;
+    margin-top: 10px;
+    
+}
+
+.div-button-filter-users{
+    z-index: 100;
+    background-color: #ffff;
+}
+
+.filters, select{
+    background-color: #f5f5f5;
+    border: none;
+    padding: 10px;
+    width: 200px;
+    border-radius: 4px;
+    color: black;
+}
+
+select {
+    background-color: #f5f5f5;
+    outline: none;
+    border: none;
+    appearance: unset;    
+    
+  }
+
+select > option{
+    background-color: #f5f5f5;
+
+}
+
+.btn-filter-users{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: none;
+    color: #c79c02;
+    font-size: 1rem;
+    font-weight: 540;
+    cursor: pointer;
+
+}
+
+.btn-select-user{
+    color: #6c6f73;
+    font-size: 0.8rem;
+    position: absolute;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 10px;
+    padding: 10px;    
+    z-index: 1000;
+    background-color: #ffff;
+}
+
+.btn-select-user > div{
+    margin: 10px 0px;
+    display: flex;
+    align-items: center;
+
+    gap: 2px;
+}
+
+.btn-select-user > div > input[type="checkbox"]{
+    border: #b7bdc6;
+    border-radius: 5px;
+}
+
+.btn-select-user > div > input[type="checkbox"]:checked{
+    background-color: #c79c02;
+}
+
+.filters:focus, select:focus{
+    outline: solid 1px #f0b90b;
+}
+
+@media (max-width: 768px) and (max-height: 1024px){
+    .nav-filters{
+        margin: auto;
+        
+    }
+
+    
+  .btn-select-user{
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    position: fixed;  
+    
+  }
+
+  .filtro-text{
+    display: none;
+  }
+
+  .amountfilter{
+    width: 120px;
+  }
+
+  .nav-filters{
+    position: unset;
+    margin: auto;
+  }
+
+
+
+}
+

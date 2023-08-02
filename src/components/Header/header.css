@@ -1,0 +1,17 @@
+header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 6.5vh;
+    
+    
+}
+
+header > svg{
+    height: 120px;
+    width: 120px;
+    padding-left: 20px;
+    color: #f0b90b;
+    fill: #f0b90b;
+}

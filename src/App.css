@@ -1,0 +1,168 @@
+@font-face {
+  font-family: "BinanceFont"; /* Asigna un nombre a tu fuente */
+  src: url("./fonts/BinanceFont.ttf") format("woff"); /* Ruta de la fuente descargada */
+}
+
+.no-desktop{
+  display: none;
+}
+
+main{
+  max-width: 100%;
+  
+}
+
+.section-ad{
+  background-color: #1e2329;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;  
+  padding: 40px;
+  font-family: BinanceFont;
+  color: white;
+}
+
+.section-ad > h2{
+  color: #73818f;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.nav-cripto-selected{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  font-family: BinanceFont;
+  gap: 40px;
+  position: sticky;
+  top: 0;
+  box-shadow: rgba(149, 157, 165, 0.1) 0px 8px 24px;
+  background-color: #ffffff;
+}
+
+
+.div-actions-buttons{
+  display: flex;
+  gap: 10px;
+ 
+  padding: 2px;
+  border-radius: 5px;
+}
+
+
+.button-buy{
+  
+  border: none;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.button-sell{
+  background-color: white;
+  border: none;
+  color: black;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.button-crypto-selected{
+  border: none;
+  background-color: white;
+  color: #7c7e80;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.button-crypto-selected:hover{
+  color: #f2b90b;
+}
+
+.button-crypto-selected:focus{
+  background-color: #fffde6;
+  color: #d9a100;
+}
+
+.section-crypto-mobile{
+  display: none;
+}
+
+@media (max-width: 768px) and (max-height: 1024px){
+
+  table, tbody, tr, td{
+    width: 90vw;
+    margin: 0;
+  }
+
+  .no-desktop{
+    display: unset;
+  }
+
+  h1{
+    display: none;
+  }
+
+  thead{
+    display: none;
+  }
+
+  td{
+    display: flex;
+    
+    justify-content: flex-start;
+  }
+  
+  .like-adv{
+    justify-content: left;
+    margin: auto;
+  }
+  .profile-picture-username{
+    margin: 0;
+  }
+
+  .nav-cripto-selected{
+    margin: auto;
+  }
+
+  .button-crypto-selected{
+    display: none;
+  }
+
+  .section-crypto-mobile{
+    display: inline;
+    width: 100px;
+    text-align: center;
+  }
+  
+  .td-limit{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .td-methods{
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .methods-div > span{
+    white-space: nowrap;
+  }
+
+  .section-ad{
+    width: 100%;
+    display: none;
+  }
+
+
+
+}
