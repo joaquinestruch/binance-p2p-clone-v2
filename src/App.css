@@ -96,6 +96,8 @@ main{
   display: none;
 }
 
+
+
 @media (max-width: 768px) and (max-height: 1024px){
 
   table, tbody, tr, td{

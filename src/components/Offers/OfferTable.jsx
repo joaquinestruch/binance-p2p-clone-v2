@@ -4,7 +4,7 @@ import "./table.css"
 import { useStore } from "../../store";
 import { v4 as uuidv4 } from 'uuid';
 import React, {useEffect } from "react";
-
+import { SkeletonsTable } from "../Skeletons/Skeletons";
 
 function OfferTable() {
 
@@ -25,7 +25,17 @@ function OfferTable() {
 
 
   if(status == "loading"){
-    return
+    return (
+      <table className="table-skeletons">
+      <td>
+        <SkeletonsTable/>
+        <div className="divider"></div>
+        <SkeletonsTable/>
+        <div className="divider"></div>
+        <SkeletonsTable/>
+      </td>
+    </table>
+    )
   }
 
   if(status == "error"){
@@ -47,7 +57,6 @@ function OfferTable() {
       </th>
     </tr>
     <tr>
-      {/* Celda de encabezado que abarca todas las columnas */}
       <th colSpan="5">
         <div className="divider"></div>
       </th>
@@ -107,15 +116,16 @@ function OfferTable() {
                 </span>
                 <span className="username-seller">
                   {nickName}{" "}
-                  <img
-                    src={
-                      userType === "user"
-                        ? ""
-                        : "https://i.ibb.co/hcv6QYK/authentication-icon.png"
-                    }
+
+                  {
+                    userType === "user" ? "" : <img
+                    src="https://i.ibb.co/hcv6QYK/authentication-icon.png"
                     className="authentication"
-                    alt=""
+                    alt="authentication"
                   />
+                  }
+
+
                 </span>
               </div>
 

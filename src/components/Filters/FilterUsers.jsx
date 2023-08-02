@@ -22,6 +22,7 @@ function FilterUsers() {
           <div>
             <input
               type="checkbox"
+              className="input-checkbox"
               onClick={(e) => {
                 changeFilterUserType(e.target.checked);
               }}

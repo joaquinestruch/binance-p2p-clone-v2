@@ -73,14 +73,12 @@ select > option{
     gap: 2px;
 }
 
-.btn-select-user > div > input[type="checkbox"]{
-    border: #b7bdc6;
-    border-radius: 5px;
+.btn-select-user > div > input[type="checkbox"] {
+  border: 2px solid #f0b90b; 
+  border-radius: 5px;
+  outline: none; 
 }
 
-.btn-select-user > div > input[type="checkbox"]:checked{
-    background-color: #c79c02;
-}
 
 .filters:focus, select:focus{
     outline: solid 1px #f0b90b;
@@ -94,10 +92,14 @@ select > option{
 
     
   .btn-select-user{
-    width: 100%;
+    width: 90%;
+    margin: auto;
+    right: 0;
     left: 0;
     bottom: 0;
     position: fixed;  
+    height: 50%;
+    border: 1px solid #f0b90b;
     
   }
 
