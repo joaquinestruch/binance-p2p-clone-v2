@@ -12,7 +12,7 @@ main{
   
 }
 
-.section-ad{
+.section-title{
   background-color: #1e2329;
   display: flex;
   align-items: center;
@@ -24,7 +24,7 @@ main{
   color: white;
 }
 
-.section-ad > h2{
+.section-title > h2{
   color: #73818f;
   font-size: 0.8rem;
   font-weight: 400;
@@ -158,9 +158,10 @@ main{
     white-space: nowrap;
   }
 
-  .section-ad{
-    width: 100%;
+  .section-title{
     display: none;
+    width: 100%;
+    
   }
 
 

@@ -5,7 +5,7 @@ import SvgVelas from "./SvgVelas"
 function Ad() {
   const {crypto} = useStore(); 
   return (
-    <section className="section-ad">
+    <section className="section-title">
         <h1>
         Opera con {crypto.toUpperCase()} sin complicaciones: compra y vende con tus métodos de pago favoritos
         </h1>
