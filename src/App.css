@@ -87,7 +87,7 @@ main{
   color: #f2b90b;
 }
 
-.button-crypto-selected:focus{
+.button-crypto-selected:focus {
   background-color: #fffde6;
   color: #d9a100;
 }

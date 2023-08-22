@@ -1,13 +1,12 @@
 import { useStore } from "../../store"
 import { CryptoPairs } from "../../utils/criptos"
 import { ButtonSell, ButtonBuy } from "./ButtonsBuySell"
-
 function NavCripto() {
 
   const {tradeType, changeCrypto} = useStore(); 
 
   return (
-    <nav className="nav-cripto-selected">
+    <nav className="nav-cripto-selected" >
         <div className="div-actions-buttons" style={{border: `1px solid ${tradeType == "buy" ? "#0ecb81" : "#f6465d"}`}}>
                 <ButtonBuy/>
                 <ButtonSell/>
@@ -15,12 +14,14 @@ function NavCripto() {
         {
             CryptoPairs.map((e) => {
                 return(
-                  <>
+                 
                   
-                  <button className="button-crypto-selected" key={crypto.randomUUID()} onClick={(event) => {
+                  <button className="button-crypto-selected"  key={crypto.randomUUID()}  onClick={(event) => {
                 changeCrypto(e)
+                    
+
                 }}>{e}</button>
-                  </>
+                 
                 )
                 
             })
@@ -31,7 +32,7 @@ function NavCripto() {
         }}>
         {
           CryptoPairs.map((e) => {
-            return <option value={e}>{e}</option>
+            return <option key={crypto.randomUUID()} value={e}>{e}</option>
           }) 
         }
         </select>

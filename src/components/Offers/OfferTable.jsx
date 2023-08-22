@@ -3,8 +3,9 @@ import {AiFillLike} from "react-icons/ai"
 import "./table.css"
 import { useStore } from "../../store";
 import { v4 as uuidv4 } from 'uuid';
-import React, {useEffect } from "react";
+import React from "react";
 import { SkeletonsTable } from "../Skeletons/Skeletons";
+import { NoResults } from "../Skeletons/NoResults";
 
 function OfferTable() {
 
@@ -64,22 +65,23 @@ function OfferTable() {
   </thead>
   <tbody>
     {
-    
     data.data.filter((e) => {
         
         if(filterUserType) return e.advertiser.userType === "merchant"
         if(!filterUserType) return e
 
-    }).filter((e) => {
+    }).filter((e, callback) => {
 
         function desformatearNumero(numeroFormateado) {
             const numeroSinFormato = numeroFormateado.replace(/[^0-9.-]+/g, "");
             const numero = parseFloat(numeroSinFormato);
             return numero;
           }
-
+          
         return Number(filterAmount) >= desformatearNumero(e.adv.minSingleTransAmount) 
     }).map((offer) => {
+
+
       const { advertiser, adv } = offer;
       const {
         userNo,
@@ -112,7 +114,7 @@ function OfferTable() {
             <td className="td-advciante">
               <div className="profile-picture-username">
                 <span className="profile-picture">
-                  {nickName[0].toUpperCase()}
+                  {nickName[0]?.toUpperCase()}
                 </span>
                 <span className="username-seller">
                   {nickName}{" "}
